@@ -1,9 +1,10 @@
 ##Creating Project file
-- SUMMARY.md
-- README.md
+- clone local repository
+- touch SUMMARY.md README.md
 - exact git-sh.zip in your local repository folder (not nessary)
 - add all-pub.sh all-pull.sh command  (not nessary)
 - .gitignore (not used by now)
+- run init.sh(in master folder)
 ##建立gh-pages分支
 	git checkout -b gh-pages
 	git push -u origin gh-pages
