@@ -1,6 +1,6 @@
 - [git]()
 	- [git-help](git/git-help.md)
-	- [git-help](git/gitbook-help.md)
+	- [gitbook-help](git/gitbook-help.md)
 - [shell]()
 	- [shell_fork](shell/shell.md)
 - [IOS]()
