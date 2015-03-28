@@ -2,7 +2,7 @@
 - SUMMARY.md
 - README.md
 - .gitignore (not nessary)
-- init.sh pub-init.sh p.sh c.sh pub.sh  (not nessary)
+- exact git-sh.zip in your local repository folder (not nessary)
 
 ##建立gh-pages分支
 	git checkout -b gh-pages
@@ -27,6 +27,7 @@
 	git commit -am "pub"
 	git push -u origin gh-pages
 
+参见git-sh.zip脚本
 
 ##访问
 https://[user_name].github.io/[repository]
