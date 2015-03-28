@@ -8,6 +8,11 @@ cd ../cn-stock
 ##command
 pub.sh
 
+cd ../cn-stock-dairy
+
+##command
+pub.sh
+
 cd ../cool
 
 ##command

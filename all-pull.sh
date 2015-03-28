@@ -10,6 +10,12 @@ cd ../cn-stock
 git fetch --al
 git rebase origin/master
 
+cd ../cn-stock-dairy
+
+##command
+git fetch --al
+git rebase origin/master
+
 cd ../cool
 
 ##command
