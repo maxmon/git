@@ -14,3 +14,5 @@ git add .
 git commit -am 'pub'
 git push origin gh-pages
 
+cd ../../git
+
