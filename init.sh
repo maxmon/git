@@ -13,4 +13,3 @@ git commit -am "init repository"
 
 git push -u origin master
 
-pub-init.sh
