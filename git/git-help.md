@@ -15,12 +15,15 @@
 `git commit -am "commit message"`
 
 `git push -u origin [remote]`
+
 ###from baidu-device
+
 >update local code
 
 	git fetch --al
 	git add [file]
 	git rebase origin [remote branch]
+	
 >checkout new branch and merge 
 
 	git fetch --al
@@ -49,3 +52,20 @@ If you already have a file checked in, and you want to ignore it, Git will not i
 
 ###no repository
 git remote add [remote repository url]
+
+##github - setup
+
+create a new repository on the command line
+
+
+echo "# git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/maxmon/git.git
+git push -u origin master
+…or push an existing repository from the command line
+
+
+git remote add origin https://github.com/maxmon/git.git
+git push -u origin master

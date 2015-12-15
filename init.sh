@@ -13,3 +13,7 @@ git commit -am "init repository"
 
 git push -u origin master
 
+#for linux os
+chmod 777 ./*.sh
+
+

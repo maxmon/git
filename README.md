@@ -1,1 +1,1 @@
-brief coding help material
+git/gitbook guide
