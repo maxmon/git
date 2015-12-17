@@ -8,7 +8,7 @@ echo "on README.md >>"
 read input
 echo "$input" >> README.md
 touch LICENSE
-echo "init_pub.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
+echo "\ninit_pub.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
 echo "_book\npub.sh"  >> .gitignore
 
 #init git

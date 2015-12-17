@@ -6,7 +6,7 @@ echo "on README.md >>"
 read input
 echo "$input" >> README.md
 touch LICENSE
-echo "init.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
+echo "\ninit.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
 
 #init git
 git init
