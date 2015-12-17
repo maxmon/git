@@ -1,19 +1,32 @@
 #!/bin/bash
-echo "make sure u are in your repository folder and folder name equal repository name"
 
-echo "make sure on master branch"
+#init repo
+rm -rf README.md
+echo "on README.md >>"
+read input
+echo "$input" >> README.md
+touch LICENSE
+echo "init.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
 
-#exchange REPOSITORY with repository name
-sed -i "s/REPOSITORY/"${PWD##*/}"/g" pub.sh
-sed -i "s/REPOSITORY/"${PWD##*/}"/g" pub-init.sh
+#init git
+git init
+echo "repository url >>"
+read remote_url
+git remote add origin "$remote_url"
 
-git add ./*
+#git script
+rm -rf p.sh
+rm -rf ap.sh
+rm -rf fr.sh
+echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> p.sh
+echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
+echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> ap.sh
 
-git commit -am "init repository"
-
+#commit 
+git add .
+git status
+git commit -am "init"
 git push -u origin master
 
-#for linux os
+
 chmod 777 ./*.sh
-
-

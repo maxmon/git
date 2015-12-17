@@ -1,1 +1,1 @@
-git/gitbook guide
+git guide
