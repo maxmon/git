@@ -21,9 +21,9 @@ git remote add origin "$remote_url"
 rm -rf p.sh
 rm -rf ap.sh
 rm -rf fr.sh
-echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> p.sh
+echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master\n\ngit status" >> p.sh
 echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
-echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> ap.sh
+echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master\n\ngit status" >> ap.sh
 
 #create pub script
 book_dir=${PWD##*/}
@@ -56,6 +56,7 @@ mkdir ../gitbook
 
 mkdir ../gitbook/$book_dir
 git clone -b gh-pages $remote_url ../gitbook/$book_dir
+
 
 
 
