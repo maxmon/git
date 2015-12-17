@@ -22,6 +22,8 @@ echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit c
 echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
 echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> ap.sh
 
+chmod 777 ./*.sh
+
 #commit 
 git add .
 git status
@@ -29,4 +31,3 @@ git commit -am "init"
 git push -u origin master
 
 
-chmod 777 ./*.sh

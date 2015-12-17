@@ -9,7 +9,7 @@ read input
 echo "$input" >> README.md
 touch LICENSE
 echo "init_pub.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
-echo "pub.sh"  >> .gitignore
+echo "_book\npub.sh"  >> .gitignore
 
 #init git
 git init
@@ -25,26 +25,8 @@ echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit c
 echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
 echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master" >> ap.sh
 
-#commit 
-git add .
-git status
-git commit -am "init"
-git push -u origin master
-
-echo "_book/*"  >> .gitignore
-
-#create origin branch gh-pages
-git checkout -b gh-pages
-git push -u origin gh-pages
-git checkout master
-git branch -D gh-pages
-mkdir ../gitbook
-
-book_dir=${PWD##*/}
-mkdir ../gitbook/$book_dir
-git clone -b gh-pages $remote_url ../gitbook/$book_dir
-
 #create pub script
+book_dir=${PWD##*/}
 rm -rf pub.sh
 echo "#!/bin/bash" >> pub.sh
 echo "rm -rf _book" >> pub.sh
@@ -58,4 +40,23 @@ echo "echo \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit 
 echo "cd ../../$book_dir" >> pub.sh
 
 chmod 777 ./*.sh
+
+#commit 
+git add .
+git status
+git commit -am "init with gitbook"
+git push -u origin master
+
+#create origin branch gh-pages
+git checkout -b gh-pages
+git push -u origin gh-pages
+git checkout master
+git branch -D gh-pages
+mkdir ../gitbook
+
+mkdir ../gitbook/$book_dir
+git clone -b gh-pages $remote_url ../gitbook/$book_dir
+
+
+
 
