@@ -21,9 +21,9 @@ git remote add origin "$remote_url"
 rm -rf p.sh
 rm -rf ap.sh
 rm -rf fr.sh
-echo "#!/bin/bash\n\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master\n\ngit status" >> p.sh
+echo "#!/bin/bash\n\ngit status\n\nif [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi\n\ngit push -u origin master\n\ngit status" >> p.sh
 echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
-echo "#!/bin/bash\n\ngit add .\ngit status\n\necho \"commit message >>\"\nread input\ngit commit -am \"\$input\"\n\ngit push -u origin master\n\ngit status" >> ap.sh
+echo "#!/bin/bash\n\ngit add .\ngit status\n\nif [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi\n\ngit push -u origin master\n\ngit status" >> ap.sh
 
 #create pub script
 book_dir=${PWD##*/}
