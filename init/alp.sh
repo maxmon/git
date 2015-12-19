@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOS=("coding" "git" "freedom")
+REPOS=()
 
 msg=""
 if [ -z "$1" ]; then
