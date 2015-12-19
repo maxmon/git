@@ -1,11 +1,10 @@
 #!/bin/bash
 
 #init repo
-rm -rf README.md
 echo "on README.md >>"
 read input
-echo "$input" >> README.md
-touch LICENSE
+echo "\n$input" >> README.md
+#touch LICENSE
 echo "\ninit.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
 
 #init git

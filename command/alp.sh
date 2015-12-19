@@ -4,7 +4,7 @@ REPOS=()
 
 msg=""
 if [ -z "$1" ]; then
-  msg="auto all commit on $(date +%Y-%m-%d)"
+  msg="auto commit on $(date +%Y-%m-%d)"
 else
   msg="$1"
 fi
