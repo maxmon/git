@@ -61,7 +61,7 @@ add zshrc
 
 - [brew some note](https://cdts_change.gitbooks.io/notebook/content/%E7%9F%A5%E8%AF%86%E5%BA%93/%E7%90%86%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6/Mac/brew.html)
 
-## python
+## python2.x
 
 #### uninstall
 
@@ -109,12 +109,11 @@ additional ,add bin path
 
 第三方lib在 /usr/local/lib/python2.7/site-packages
 
-## basic py module
+## basic py module(py2.x)
 
-可连写：pip install numpy scipy matplotlib pandas nltk ipython
+可连写：pip install numpy scipy matplotlib pandas nltk jupyter
 
-- pip install ipython
-- pip install notebook(if need)
+- pip install jupyter(ipython and notebook)
 - pip install tornado
 - brew install zeromq --universal
 - brew install freetype libpng pyqt   // pyqt seems needing lib to be downloaded
@@ -128,8 +127,8 @@ additional ,add bin path
 add path
 
 alias py='python'
-alias pynb ='ipython notebook'
-alias pynbd="ipython notebook --notebook-dir='工作目录'"
+alias pynb ='jupyter notebook'
+alias pynbd="jupyter notebook --notebook-dir='工作目录'"
 
 ## shadow socks
 
