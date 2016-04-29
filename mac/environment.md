@@ -111,24 +111,17 @@ additional ,add bin path
 
 ## basic py module(py2.x)
 
-可连写：pip install numpy scipy matplotlib pandas nltk jupyter
+pip install jupyter tornado numpy scipy matplotlib pandas seaborn
 
-- pip install jupyter(ipython and notebook)
-- pip install tornado
-- brew install zeromq --universal
-- brew install freetype libpng pyqt   // pyqt seems needing lib to be downloaded
-- pip install numpy
-- pip install scipy
-- pip install matplotlib
-- pip install pandas
-- pip install seaboard
-- brew install libxml2
+brew install zeromq --universal
+
+brew install freetype libpng pyqt libxml2  // pyqt seems needing lib to be downloaded
 
 add path
 
 alias py='python'
-alias pynb ='jupyter notebook'
-alias pynbd="jupyter notebook --notebook-dir='工作目录'"
+alias nb ='jupyter notebook'
+alias nbd="jupyter notebook --notebook-dir='工作目录'"
 
 ## shadow socks
 
@@ -219,9 +212,7 @@ config
 
 - autocomplete-python
 - linter
-	- pip install flake8
-	- pip install flake8-docstrings
-	- apm install linter-flake8
+	- pip install flake8 flake8-docstrings linter-flake8
 	- init script `process.env.PATH = ['/usr/local/bin/', process.env.PATH].join(':')`
 
 #### manual install package nam install建议翻墙执行
