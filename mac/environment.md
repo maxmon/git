@@ -111,7 +111,7 @@ additional ,add bin path
 
 ## basic py module(py2.x)
 
-pip install jupyter tornado numpy scipy matplotlib pandas seaborn
+pip install jupyter tornado numpy scipy matplotlib pandas seaborn numexpr statsmodels patsy scrapy
 
 brew install zeromq --universal
 
@@ -224,3 +224,27 @@ into package-dir run `npm install`
 #### auto 推荐，需要翻墙
 
 apm install linter
+
+## to be done(or tested)
+
+#### Mayavi()
+
+pip install mayavi自动检测并且安装大部分的依赖包
+
+brew install vtk
+
+测试  python -c 'import vtk'
+	
+	报错 将/usr/share/pyshared/vtk 链接到当前python的lib目录下，并且把/usr/lib/pyshared/python2.7/vtk中的内容也链接过来
+	cd ~/.pyenv/versions/2.7.10/lib/python2.7/site-packages
+	mkdir vtk
+	ln -s /usr/share/pyshared/vtk/* ./
+	ln -s /usr/lib/pyshared/python2.7/vtk/* ./
+	
+## pb
+
+pip install -U pip setuptools
+
+## gitbook
+
+npm install gitbook-cli -g

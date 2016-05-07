@@ -50,4 +50,4 @@ step
 ##more
 
 - [Creating Project Pages](https://help.github.com/articles/creating-project-pages-manually/)
-- [gitbook guide](http://wanqingwong.com/gitbook-zh)
+- [gitbook guide](https://github.com/GitbookIO/gitbook)
