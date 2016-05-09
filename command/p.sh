@@ -9,6 +9,6 @@ else
 	git commit -am "$1"
 fi
 
-git push -u origin master
+git push origin HEAD:master
 
 git status
