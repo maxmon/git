@@ -21,10 +21,18 @@ git remote add origin "$remote_url"
 rm -rf p.sh
 rm -rf ap.sh
 rm -rf fr.sh
-echo "#!/bin/bash\n\ngit status\n\nif [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi\n\ngit push origin HEAD:master\n\ngit status" >> p.sh
-echo "#!/bin/bash\n\ngit fetch --al\ngit rebase origin/master" >> fr.sh
-echo "#!/bin/bash\n\ngit add .\ngit status\n\nif [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi\n\ngit push origin HEAD:master\n\ngit status" >> ap.sh
 
+echo "#!/bin/bash" >> fr.sh
+echo "git fetch --al" >> fr.sh
+echo "git rebase origin/master" >> fr.sh
+
+
+echo "#!/bin/bash\n\ngit add .\ngit status\n\nif [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi\n\ngit push origin HEAD:master\n\ngit status" >> ap.sh
+echo "git add ." >> ap.sh
+echo "git status" >> ap.sh
+echo "if [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi" >> ap.sh
+echo "git push origin HEAD:master" >> ap.sh
+echo "git status" >> ap.sh
 #create pub script
 book_dir=${PWD##*/}
 rm -rf pub.sh
@@ -39,7 +47,7 @@ echo "git add ." >> pub.sh
 echo "git commit -am \"gitbook auto message\"\n\ngit push origin HEAD:gh-pages" >> pub.sh
 echo "cd ../../$book_dir" >> pub.sh
 
-chmod 777 ./*.sh
+chmod 755 ./*.sh
 
 #commit 
 git add .
