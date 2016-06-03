@@ -4,7 +4,7 @@ command+R start 》》 terminal 》》run `csrutil disable` # fix sudo still per
 
 ## Xcode and Command_Line_Tools
 
-建议直接去https://developer.apple.com/downloads/ 下载对应版本
+建议直接去https://developer.apple.com/downloads/ 下载对应版本 or run `xcode-select --install`(untested)
 
 sudo xcode-select --switch /Library/Developer/CommandLineTools #指定插件目录
 
@@ -248,3 +248,29 @@ pip install -U pip setuptools
 ## gitbook
 
 npm install gitbook-cli -g
+
+## [octave](http://wiki.octave.org/Octave_for_MacOS_X)
+
+	brew update && brew upgrade
+	brew tap homebrew/science
+	brew install gcc
+	
+if tap fail:untap --> fix--> tap again
+
+[install xquartz](https://www.xquartz.org/) 
+
+	brew install octave
+	
+If brew complains about not having a formula for octave, the following command should fix it: $ brew tap --repair
+
+	brew install gnuplot
+	
+or
+
+	brew uninstall gnuplot
+	brew install gnuplot --with-x
+	echo setenv GNUTERM x11 >> ~/.octaverc
+
+~/.zshrc
+
+	export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
