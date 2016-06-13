@@ -80,7 +80,7 @@ sudo rm /usr/bin/python-config
 
 #### brew install
 
-	brew install python --framework --universal
+	brew install python
 
 add path `export PATH=/usr/local:/usr/local/bin:/usr/local/share/python:$PATH` to zshrc or .bash_profile
 
