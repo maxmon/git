@@ -12,7 +12,7 @@ fi
 for repo in ${REPOS[@]} ; do
       cd "$repo"
       echo "on repository >>>>>>>>>>>>> $repo"
-      sh ap.sh "$msg"
+      sh p.sh "$msg"
       cd ..
   done
 

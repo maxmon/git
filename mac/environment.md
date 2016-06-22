@@ -111,7 +111,7 @@ additional ,add bin path
 
 ## basic py module(py2.x)
 
-pip install jupyter tornado numpy scipy matplotlib pandas seaborn numexpr statsmodels patsy scrapy
+pip install jupyter tornado numpy scipy matplotlib pandas seaborn numexpr statsmodels patsy scrapy pycrypto pymongo
 
 brew install zeromq --universal
 
@@ -274,3 +274,17 @@ or
 ~/.zshrc
 
 	export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+	
+## [mongdb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+
+	brew install mongdb
+
+	# To have launchd start mongodb now and restart at login:
+	brew services start mongodb
+	# Or, if you don't want/need a background service you can just run:
+	mongod --config /usr/local/etc/mongod.conf
+	# set dbPath in the mongodb.conf file
+	storage:
+    dbPath: "/path/to/your/database/data/db"
+    then just run
+	mongod -f /etc/mongodb.conf

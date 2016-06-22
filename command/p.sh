@@ -2,12 +2,13 @@
 
 git add .
 
+msg=""
 if [ -z "$1" ]; then
-  echo "commit message >>"
-  read input
-  git commit -am "$input"
+  msg="auto commit $(date +%Y-%m-%d)"
 else
-  git commit -am "$1"
+  msg="$1"
 fi
+
+git commit -am "$msg"
 
 git push origin HEAD:master
