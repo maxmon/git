@@ -91,6 +91,7 @@ add path `export PYTHONPATH=/usr/local/lib/python2.7:$PYTHONPATH` to zshrc or .b
 	sudo mkdir /System/Library/Frameworks/Python.framework/Versions
 	sudo ln -s /usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/Current
 
+	sudo ln -s /usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/2.7
 	sudo ln -s /usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/Resources /System/Library/Frameworks/Python.framework/Resources
 	sudo ln -s /usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/Headers /System/Library/Frameworks/Python.framework/Headers
 	sudo ln -s /usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/Python /System/Library/Frameworks/Python.framework/Python
