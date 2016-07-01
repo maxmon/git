@@ -4,7 +4,7 @@ command+R start 》》 terminal 》》run `csrutil disable` # fix sudo still per
 
 ## Xcode and Command_Line_Tools
 
-建议直接去https://developer.apple.com/downloads/ 下载对应版本 or run `xcode-select --install`(untested)
+xcode-select --install / appstore -xocde[recommand]
 
 sudo xcode-select --switch /Library/Developer/CommandLineTools #指定插件目录
 
