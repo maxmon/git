@@ -226,6 +226,11 @@ into package-dir run `npm install`
 
 apm install linter
 
+## npm
+
+- npm install -g npm-autoinit
+- npm config set onload-script npm-autoinit/autoinit
+
 ## to be done(or tested)
 
 #### Mayavi()
