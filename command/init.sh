@@ -23,7 +23,11 @@ echo "git rebase origin/master" >> fr.sh
 echo "#!/bin/bash" >> p.sh
 echo "git add ." >> p.sh
 echo "msg=\"\"" >> p.sh
-echo "if [ -z \"\$1\"]; then\n\tmsg=\"auto commit $(date +%Y-%m-%d)\"\nelse\n\tmsg=\"\$1\"\nfi" >> p.sh
+echo "if [ -z \"\$1\"]; then" >> p.sh
+echo "msg=\"auto commit \$(date +%Y-%m-%d)\"" >> p.sh
+echo "else" >> p.sh
+echo "msg=\"\$1\"" >> p.sh
+echo "fi" >> p.sh
 echo "git commit -am \"\$msg\"" >> p.sh
 echo "git push origin HEAD:master" >> p.sh
 echo "git status" >> p.sh

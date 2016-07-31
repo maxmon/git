@@ -28,7 +28,13 @@ echo "git rebase origin/master" >> fr.sh
 
 echo "#!/bin/bash" >> p.sh
 echo "git add ." >> p.sh
-echo "if [ -z \"\$1\"]; then\n\techo \"commit message >>\"\n\tread input\n\tgit commit -am \"\$input\"\nelse\n\tgit commit -am \"\$1\"\nfi" >> p.sh
+echo "msg=\"\"" >> p.sh
+echo "if [ -z \"\$1\"]; then" >> p.sh
+echo "msg=\"auto commit \$(date +%Y-%m-%d)\"" >> p.sh
+echo "else" >> p.sh
+echo "msg=\"\$1\"" >> p.sh
+echo "fi" >> p.sh
+echo "git commit -am \"\$msg\"" >> p.sh
 echo "git push origin HEAD:master" >> p.sh
 echo "git status" >> p.sh
 
@@ -43,7 +49,9 @@ echo "cp -rf _book/* ../gitbook/$book_dir" >> pub.sh
 echo "rm -rf _book" >> pub.sh
 echo "cd ../gitbook/$book_dir" >> pub.sh
 echo "git add ." >> pub.sh
-echo "git commit -am \"gitbook auto message\"\n\ngit push origin HEAD:gh-pages" >> pub.sh
+echo "msg=\"auto commit \$(date +%Y-%m-%d)\"" >> pub.sh
+echo "git commit -am \"gitbook auto message: \$msg\"" >> pub.sh
+echo "git push origin HEAD:gh-pages" >> pub.sh
 echo "cd ../../$book_dir" >> pub.sh
 
 chmod 755 ./*.sh
