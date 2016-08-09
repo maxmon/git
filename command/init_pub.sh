@@ -7,9 +7,15 @@ rm -rf README.md
 echo "on README.md >>"
 read input
 echo "$input" >> README.md
-touch LICENSE
-echo "\ninit_pub.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
-echo "_book\npub.sh"  >> .gitignore
+touch 
+
+
+echo "init.sh"  >> .gitignore
+echo "p.sh"  >> .gitignore
+echo "fr.sh"  >> .gitignore
+echo "pub.sh"  >> .gitignore
+echo "*.pyc"  >> .gitignore
+echo "_book"  >> .gitignore
 
 #init git
 git init

@@ -3,9 +3,14 @@
 #init repo
 echo "on README.md >>"
 read input
-echo "\n$input" >> README.md
+echo "$input" >> README.md
+
 #touch LICENSE
-echo "\ninit.sh\np.sh\nap.sh\nfr.sh"  >> .gitignore
+echo "init.sh"  >> .gitignore
+echo "p.sh"  >> .gitignore
+echo "fr.sh"  >> .gitignore
+echo "pub.sh"  >> .gitignore
+echo "*.pyc"  >> .gitignore
 
 #init git
 git init
