@@ -1,3 +1,7 @@
+## git
+
+git config --global http.postBuffer 524288000
+
 ## mac
 
 command+R start 》》 terminal 》》run `csrutil disable` # fix sudo still permission deny
