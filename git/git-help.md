@@ -52,6 +52,7 @@ If you already have a file checked in, and you want to ignore it, Git will not i
 ##errors
 
 ###no repository
+
 git remote add [remote repository url]
 
 ##github - setup
