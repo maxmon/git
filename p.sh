@@ -3,7 +3,7 @@ git add .
 msg=""
 if [ -z "$1" ]
 then
-msg="auto commit 2016-07-24"
+msg="auto commit $(date +%Y-%m-%d)"
 else
 msg="$1"
 fi
