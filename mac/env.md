@@ -116,7 +116,7 @@ additional ,add bin path
 
 ## basic py module(py2.x)
 
-pip install jupyter tornado numpy scipy matplotlib pandas seaborn numexpr statsmodels patsy scrapy pycrypto pymongo sqlalchemy six sh
+pip install jupyter tornado numpy scipy matplotlib pandas seaborn numexpr statsmodels patsy scrapy pycrypto pymongo sqlalchemy six sh pillow
 
 brew install zeromq --universal
 
