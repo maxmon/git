@@ -4,7 +4,11 @@ git config --global http.postBuffer 524288000
 
 ## mac
 
-command+R start 》》 terminal 》》run `csrutil disable` # fix sudo still permission deny
+command+R start 》》 菜单栏 打开终端
+
+》》run `csrutil disable` # fix sudo still permission deny
+
+command+R start 》》 备份恢复
 
 ## Xcode and Command_Line_Tools
 
